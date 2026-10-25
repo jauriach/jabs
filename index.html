@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collectif JABS (jusqu'au bout solidaire)</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	
+
+
+<script> <!-- Script pour le chargement différentiel des vidéos-->
+document.addEventListener('DOMContentLoaded', function() {
+  const itemsPerClick = 2;  // 2 rows = 6 vidéos
+  const videoRows = Array.from(document.querySelectorAll('.video-row'));
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const spinner = loadMoreBtn.querySelector('.spinner-border');
+  let shownCount = 2;  // Au départ, rang -2 et -1 sont visibles (2 rows)
+
+  loadMoreBtn.addEventListener('click', function() {
+    spinner.classList.remove('d-none');  // Animation loading Bootstrap
+    loadMoreBtn.disabled = true;
+
+    // Simule un petit délai pour l'effet loading
+    setTimeout(() => {
+      const nextRows = videoRows.slice(shownCount, shownCount + itemsPerClick);
+      
+      nextRows.forEach(row => {
+        row.classList.remove('d-none');
+      });
+
+      shownCount += itemsPerClick;
+
+      // Si plus de rows, cache le bouton
+      if (shownCount >= videoRows.length) {
+        loadMoreBtn.classList.add('d-none');
+      }
+
+      spinner.classList.add('d-none');
+      loadMoreBtn.disabled = false;
+    }, 500);  // Délai optionnel pour l'effet
+  });
+});
+</script>
+
+
+
+
+	    <link rel="stylesheet" href="styles.css">
+
+<meta property="og:title" content="Collectif JABS">
+<meta property="og:description" content="Non à l'euthanasie, au nom de la solidarité. Dans un système libéral (et non ultra-libéral), la liberté s'arrête là où commence son usage oppressif, en l'occurence âgiste et validiste.">
+<meta property="og:image" content="https://collectif-jabs.fr/images/banner.png">
+<meta property="og:url" content="https://collectif-jabs.fr/index.html">
+    
+   
+    
+
+ <style>
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="email"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+         .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f8f9fa; /* Couleur de fond discrète */
+            color: #6c757d; /* Couleur de l'icône */
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Pour arrondir l'image */
+        }
+        .social-icons a:hover {
+            background-color: #e9ecef;
+            transform: scale(1.1);
+        }
+        .social-icons a img {
+            width: 40%; /* Le papillon est légèrement plus petit que la bulle */
+            height: 40%; /* Ajustement pour garder les proportions */
+            object-fit: contain; /* Conserve les proportions */
+            filter: grayscale(100%); /* Rend l'image grisée */
+            opacity: 0.7; /* Rend l'image légèrement transparente */
+            transition: all 0.3s ease; /* Ajoute une animation au survol */
+        }
+
+    </style>
+    
+</head>
+
+   
+
+<body>
+&nbsp;
+    <!-- Bannière pleine largeur -->
+	
+<div class="banner-container">
+        <img src="images/banner.png" class="img-fluid w-100" alt="Bannière Collectif JABS">
+    </div>
+	
+  <div id="navbar-placeholder">
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Collectif JABS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+		<li class="nav-item">
+          <a class="nav-link" href="manifesto.html">Notre manifeste</a>
+        </li>
+	  	<li class="nav-item">
+          <a class="nav-link" href="quisommesnous.html">Qui sommes-nous ?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="docsutiles.html">Ressources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacterdepute.html">Contactez vos parlementaires</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="articles/index.html">Nos analyses</a>
+        </li>
+    
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+	<section class="mt-5 container">
+		
+<!-- Barre de navigation -->
+<!-- Contenu principal --> 
+
+        <!-- Vidéos rang -2 -->
+    <div class="row video-row">
+        <div class="col-md-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/IMogoqvzoIE" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/r4t6PjJkrQg" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/bvLS6q683eI" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+    </div>
+    </div>
+
+        <!-- Vidéos rang -1 -->
+    <div class="row video-row">
+        <div class="col-md-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/3Ibb7UQm3G0" preload="none" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/do6JF-SMHzM" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ahUuqJVKeyc" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+    </div>
+    </div>
+
+        <!-- Vidéos rang 0 -->
+    <div class="row video-row d-none">
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/MD6ffce0yg4" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/4_YshMjpdks" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/Vh_FWW8872E" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+    </div>
+    </div>
+
+        <!-- Vidéos rang 1 -->
+    <div class="row video-row d-none">
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/fab5UtQJY0Q" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/ifeb0FWDCAc" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/AU0-r2Jl1ec?feature=share" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+    </div>
+    </div>
+        
+	  <!-- Vidéos rang 2 -->
+	  <div class="row video-row d-none">
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/WTekol_jXb8" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/ElHCwfFGSdQ" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+	    <div class="col-md-4 mb-4">
+	      <div class="video-container">
+	        <iframe src="https://www.youtube.com/embed/geQ3ACmKCB0" loading="lazy" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+
+    
+</div>
+<div class="container text-center my-5">
+  <button id="loadMoreBtn" class="btn btn-primary btn-lg">
+    <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+    Charger d'autres vidéos
+  </button>
+</div>
+    </section>
+    <div class="container">
+
+        <main>
+			
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!-- Pour Bootstrap 5 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+      </main>
+
+<!-- <iframe width="540" height="305" src="https://5ad108b0.sibforms.com/serve/MUIFAGIwIi6g5GttRxxmPD_20-T2aclP-3zH-xc-KDEVPC9phgKmZIbe_zV-e0Dq688ki8n5fwxFlbtRc2I5wbPWbqp0Y6wCA0X2coDaWCetzkw2JP_MeZwGt0bgbZAdHEcemQtDlisMnO8qCPljq_4ozI-KULHDD9xOsTOx9OH3LmDFFw5oNoScEfotLSlWbid9j0nN6U_ehcyD" loading="lazy" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+NEWSLETTER ?    
+-->
+     
+</div>
+<footer class="footer text-center mt-5">
+  <div class="container">
+    <p>&copy; 2024 Collectif JABS (jusqu'au bout solidaire). Tous droits réservés.</p>
+    <div class="container" style="margin-bottom: 20px;">
+            <div class="social-icons" style="padding: 10px 0;">
+                <a href="https://www.instagram.com/collectifjabs/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                  <a href="https://collectifjabs.bsky.social" target="_blank" aria-label="Bluesky">
+                    <img src="images/bluesky-logo.svg" alt="Bluesky Logo">
+                </a>
+                <a href="https://x.com/collectifJABS" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCSaeZbM3_K3XsvNozSNgr3Q" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://corneill.es/@collectifjabs" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-mastodon"></i>
+                </a>
+            </div>
+        </div>
+  </div>
+</footer>
+
+</html>
